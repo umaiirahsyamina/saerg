@@ -1,0 +1,11 @@
+Model Information:
+* title:	Courier With Package
+* source:	https://sketchfab.com/3d-models/courier-with-package-6156a9897b434d2da2bf61b71f234790
+* author:	restore50 (https://sketchfab.com/restore50)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Courier With Package" (https://sketchfab.com/3d-models/courier-with-package-6156a9897b434d2da2bf61b71f234790) by restore50 (https://sketchfab.com/restore50) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
