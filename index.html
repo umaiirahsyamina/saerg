@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Day One at Nexora · SAERG</title>
+    <meta
+      name="description"
+      content="SAERG: a social-engineering awareness escape room game. Final Year Project, Universiti Putra Malaysia."
+    />
+    <!-- UI fonts (Section 5): Space Grotesk for UI, JetBrains Mono for timer/code digits -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&family=Space+Grotesk:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- The 3D world is drawn here by Babylon.js -->
+    <canvas id="game-canvas" aria-label="3D game view"></canvas>
+
+    <!-- All 2D screens (HUD, quiz, email, phone, ...) are HTML overlays inside this layer -->
+    <div id="ui-root"></div>
+
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

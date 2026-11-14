@@ -1,0 +1,104 @@
+/* ------------------------------------------------------------------
+   Global styles and design tokens (CLAUDE.md Section 5).
+   Every overlay reuses these CSS variables so colours stay consistent.
+   ------------------------------------------------------------------ */
+:root {
+  --bg: #0f1419;
+  --panel: #1a2129;
+  --border: #2c3640;
+  --border-strong: #3a4650;
+  --text: #e8ecef;
+  --text-muted: #9aa6b2;
+  --accent: #f2a93b;
+  --good: #4cc38a;
+  --danger: #f0645a;
+
+  --font-ui: "Space Grotesk", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+
+  --radius: 10px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-ui);
+}
+
+/* The Babylon canvas fills the whole window, behind the UI layer. */
+#game-canvas {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  outline: none;
+}
+
+/* The UI layer sits above the canvas. It ignores the mouse by default so the
+   3D view stays clickable; individual overlays switch pointer events back on. */
+#ui-root {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+}
+
+#ui-root > * {
+  pointer-events: auto;
+}
+
+/* Visible keyboard focus everywhere (accessibility). */
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+/* Shared panel look: flat colour, thin border, rounded corners, no gradients. */
+.panel {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 24px 32px;
+}
+
+/* ---------- M0 "Hello SAERG" overlay ---------- */
+.hello-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: min(520px, calc(100vw - 32px));
+  text-align: center;
+}
+
+.hello-overlay h1 {
+  margin: 0 0 8px;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.hello-overlay p {
+  margin: 0;
+  color: var(--text-muted);
+}
+
+.hello-overlay .hello-label {
+  display: block;
+  margin-bottom: 12px;
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
